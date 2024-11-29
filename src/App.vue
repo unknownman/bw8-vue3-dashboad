@@ -1,13 +1,6 @@
 <template>
-  <p>{{ message }}</p>
-  <div>
-    <button @click="onCick">روی من بزن</button>
-  </div>
+    <HelloWorld></HelloWorld>
 </template>
 <script setup>
-import {ref} from "vue"
-const message = ref("سلام بر جهان");
-function onCick() {
-  message.value = "خداحافظ "
-}
+import HelloWorld from '@/components/HelloWorld.vue'
 </script>
