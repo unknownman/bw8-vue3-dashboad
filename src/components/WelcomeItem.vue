@@ -1,3 +1,6 @@
+<script setup>
+import '$/main.css'
+</script>
 <template>
   <div class="item">
     <i>
