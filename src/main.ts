@@ -3,6 +3,7 @@ import './assets/main.css'
 import { createApp } from 'vue'
 
 import App from './App.vue'
+import ButtonCounter from '@/components/ButtonCounter.vue'
 
 const app = createApp(App)
 app.config.errorHandler = (err, instance, info) => {
@@ -12,4 +13,5 @@ app.config.globalProperties.$locale = "fa"
 app.config.globalProperties.$log = (...params) => {
     console.log(params)
 }
+app.component("ButtonCounter", ButtonCounter)
 app.mount('#app')
