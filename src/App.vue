@@ -10,6 +10,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import ItemList from './components/ItemList.vue'
 const selectedItem = ref(null);
 function handleItemSelected(item) {
   selectedItem.value = item;
@@ -49,8 +51,6 @@ const productList = ref([
     availability: true
   }
 ]);
-import { ref } from 'vue';
-import ItemList from './components/ItemList.vue'
 
 </script>
 
