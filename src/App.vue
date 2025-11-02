@@ -1,5 +1,5 @@
 <template>
-    <div id="app-container flex flex-col min-h-screen">
+    <div id="app-container flex flex-col min-h-screen" :class="themeStore.currentTheme">
         <Header />
         <div class="container mx-auto pt-10 min-h-[calc(100vh-281px)]">
             <ItemList :items="productList" @itemSelected="handleItemSelected" class="item-list-container" />
@@ -18,6 +18,9 @@ import { ref } from 'vue';
 import ItemList from './components/ItemList.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import { useThemeStore } from './stores/themeStore'
+
+const themeStore = useThemeStore()
 
 const selectedItem = ref(null);
 function handleItemSelected(item) {
